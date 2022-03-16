@@ -2612,6 +2612,7 @@ sub fetch_via_curl {
     my @curlopt = ();
     my @header_lines = ();
 
+    info("KEYSYSTEMS url is %s", $url);  
     ## canonify proxy and url
     $force_ssl = 1 if ($url =~ /^https:/);
     $proxy  =~ s%^https?://%%i if defined($proxy);
@@ -2619,6 +2620,8 @@ sub fetch_via_curl {
     $server = $url;
     $server =~ s%[?/].*%%;
     $url    =~ s%^[^?/]*/?%%;
+
+    info("KEYSYSTEMS url is %s", $url);  
 
     $use_ssl = 1 if ($force_ssl || ($globals{'ssl'} && !($params{ignore_ssl_option} // 0)));
 
