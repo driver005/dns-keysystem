@@ -6136,6 +6136,7 @@ sub nic_keysystems_update {
    # Try to get URL  
    my $reply = geturl(opt('proxy'), $url);  
   
+    info("KEYSYSTEMS reply is:  %s", $reply);  
    # No response, declare as failed  
    if (!defined($reply) || !$reply) {  
      failed("KEYSYSTEMS updating %s: Could not connect to %s.", $h, $config{$h}{'server'});  
