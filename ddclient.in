@@ -119,6 +119,7 @@ my %builtinweb = (
     'nsupdate.info-ipv4' => {'url' => 'http://ipv4.nsupdate.info/myip'},
     'nsupdate.info-ipv6' => {'url' => 'http://ipv6.nsupdate.info/myip'},
     'zoneedit' => {'url' => 'https://dynamic.zoneedit.com/checkip.html'},
+    'keysystems' => {'url' => 'http://checkip.dyndns.org/', 'skip' => 'Current IP Address:'},
 );
 my %builtinfw = (
     '2wire' => {
