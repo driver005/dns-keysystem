@@ -6124,7 +6124,7 @@ sub nic_keysystems_update {
   
    # Set the URL that we're going to to update  
    my $url;  
-   $url  = "http://$config{$h}{'server'}/update.php";
+   $url  = "https://$config{$h}{'server'}/update.php";
    $url .= "?hostname=";  
    $url .= $h;  
    $url .= "&password=";  
