@@ -23,3 +23,5 @@ server=$serverURL,
 password='$password'  
 $domainName
 " > /etc/ddclient.conf
+
+sudo service ddclient restart
