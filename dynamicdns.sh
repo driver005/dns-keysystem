@@ -1,13 +1,13 @@
 apt-get install ddclient
 cp ddclient.in /usr/sbin/ddclient
 
-echo Please input the server url ( example: dynamicdns.key-systems.net ).
+echo "Please input the server url ( example: dynamicdns.key-systems.net )".
 read serverURL
 
-echo Please input your password.
+echo "Please input your password".
 read password
 
-echo Please input your domainName ( example: host.example.com ).
+echo "Please input your domainName ( example: host.example.com )".
 read domainName
 
 echo : "
