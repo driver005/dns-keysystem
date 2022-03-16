@@ -1,4 +1,5 @@
 apt-get install ddclient
+apt-get install libio-socket-inet6-perl 
 cp ddclient.in /usr/sbin/ddclient
 
 echo "Please input the server url ( example: dynamicdns.key-systems.net )".
@@ -11,7 +12,18 @@ echo "Please input your domainName ( example: host.example.com )".
 read domainName
 
 echo : "
-# /etc/ddclient.conf  
+# /etc/ddclient.conf 
+
+protocol=keysystems,
+server=$serverURL,  
+password='$password'  
+" > /etc/ddclient.conf
+
+mkdir /etc/ddclient/
+touch /etc/ddclient/ddclient.conf
+
+echo : "
+# /etc/ddclient/ddclient.conf
 daemon=5m  
 syslog=yes  
 ssl=yes  
@@ -22,6 +34,4 @@ protocol=keysystems,
 server=$serverURL,  
 password='$password'  
 $domainName
-" > /etc/ddclient.conf
-
-sudo service ddclient restart
+" > /etc/ddclient/ddclient.conf
