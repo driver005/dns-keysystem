@@ -6132,6 +6132,7 @@ sub nic_keysystems_update {
    $url .= "&ip=";  
    $url .= $ip;  
      
+    info("KEYSYSTEMS url is %s", $url);  
    # Try to get URL  
    my $reply = geturl(opt('proxy'), $url);  
   
