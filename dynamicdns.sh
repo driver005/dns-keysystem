@@ -19,7 +19,13 @@ server=$serverURL,
 password='$password'  
 " > /etc/ddclient.conf
 
-mkdir -p /etc/ddclient/
+if [ ! -d /etc/ddclient/ ]
+then
+    mkdir /etc/ddclient/
+else
+    echo "Directory exists"
+fi
+
 touch /etc/ddclient/ddclient.conf
 
 echo : "
