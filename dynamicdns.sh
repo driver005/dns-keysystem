@@ -19,7 +19,7 @@ server=$serverURL,
 password='$password'  
 " > /etc/ddclient.conf
 
-mkdir /etc/ddclient/
+mkdir -p /etc/ddclient/
 touch /etc/ddclient/ddclient.conf
 
 echo : "
