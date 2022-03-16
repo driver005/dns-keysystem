@@ -12,8 +12,9 @@ read domainName
 
 echo : "
 protocol=keysystems,  
-server=$(serverURL),  
-password='$(password)' 
+server=$serverURL,  
+password='$password' 
+$domainName
 " > /etc/ddclient.conf  
 
 echo : "
@@ -25,7 +26,7 @@ cache=/var/cache/ddclient/ddclient_eth0.cache
 use=if, if=eth0  
 
 protocol=keysystems,
-server=$(serverURL),  
-password='$(password)'  
-$(domainName)
+server=$serverURL,  
+password='$password'  
+$domainName
 " > /etc/ddclient/ddclient_eth0.conf
