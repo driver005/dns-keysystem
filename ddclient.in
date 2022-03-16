@@ -6083,8 +6083,10 @@ sub nic_woima_update {
 ## nic_keysystems_examples  
 ######################################################################  
 sub nic_keysystems_examples {  
- return < o 'keysystems'  
-  
+    return <<"EoEXAMPLE";
+
+o 'keysystems'
+
 The 'keysystems' protocol is used by the non-free  
 dynamic DNS service offered by [www.domaindiscount24.com](www.domaindiscount24.com) and [www.rrpproxy.net/](www.rrpproxy.net/).  
 Check [https://www.domaindiscount24.com/faq/en/dynamic-dns](https://www.domaindiscount24.com/faq/en/dynamic-dns) for API  
@@ -6097,13 +6099,13 @@ non-fully.qualified.host     ## the host registered with the service.
   
 Example ${program}.conf file entries:  
 ## single host update  
-protocol=keysystems,                    \\\\  
+protocol=keysystems,             \\\\  
 password=prettypassword          \\\\  
-myhost  
-  
-EoEXAMPLE  
-}  
-  
+myhost                           \\\\ 
+
+EoEXAMPLE
+}
+
 ######################################################################  
 ## nic_keysystems_update  
 ## by Tom Bosmans  
