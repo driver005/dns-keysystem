@@ -35,6 +35,7 @@ syslog=yes
 ssl=yes  
 pid=/var/run/ddclient/ddclient.pid  
 cache=/var/cache/ddclient/ddclient.cache  
+use=if, if=wlan0  
 
 protocol=keysystems,
 server=$serverURL,  
