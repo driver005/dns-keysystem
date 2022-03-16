@@ -33,6 +33,7 @@ echo : "
 daemon=5m  
 syslog=yes  
 ssl=false  
+curl=yes
 ttl=1
 pid=/var/run/ddclient/ddclient.pid  
 cache=/var/cache/ddclient/ddclient.cache  
