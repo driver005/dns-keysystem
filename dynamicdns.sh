@@ -35,6 +35,8 @@ syslog=yes
 ssl=yes  
 pid=/var/run/ddclient/ddclient.pid  
 cache=/var/cache/ddclient/ddclient.cache  
+use=web
+web=checkip.dyndns.org
 use=if, if=wlan0  
 
 protocol=keysystems,
