@@ -32,11 +32,11 @@ echo : "
 # /etc/ddclient/ddclient.conf
 daemon=5m  
 syslog=yes  
-ssl=false  
+ssl=yes  
 ttl=1
 pid=/var/run/ddclient/ddclient.pid  
 cache=/var/cache/ddclient/ddclient.cache  
-use=web, web=checkip.dyndns.org
+use=web, web=https://domains.google.com/checkip
 
 protocol=keysystems,
 server=$serverURL,  
