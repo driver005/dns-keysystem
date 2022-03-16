@@ -10,23 +10,17 @@ read password
 echo "Please input your domainName ( example: host.example.com )".
 read domainName
 
-echo : "
-protocol=keysystems,  
-server=$serverURL,  
-password='$password' 
-$domainName
-" > /etc/ddclient.conf  
+touch /etc/ddclient/ddclient.conf
 
 echo : "
 daemon=5m  
 syslog=yes  
 ssl=yes  
-pid=/var/run/ddclient/ddclient_eth0.pid  
-cache=/var/cache/ddclient/ddclient_eth0.cache  
-use=if, if=eth0  
+pid=/var/run/ddclient/ddclient.pid  
+cache=/var/cache/ddclient/ddclient.cache  
 
 protocol=keysystems,
 server=$serverURL,  
 password='$password'  
 $domainName
-" > /etc/ddclient/ddclient_eth0.conf
+" > /etc/ddclient.conf  
