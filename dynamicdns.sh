@@ -36,6 +36,7 @@ ssl=yes
 ttl=1
 pid=/var/run/ddclient/ddclient.pid  
 cache=/var/cache/ddclient/ddclient.cache  
+use=keysystems
 
 protocol=keysystems,
 server=$serverURL,  
