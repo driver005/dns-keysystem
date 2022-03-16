@@ -17,6 +17,7 @@ echo : "
 protocol=keysystems,
 server=$serverURL,  
 password='$password'  
+$domainName
 " > /etc/ddclient.conf
 
 if [ ! -d /etc/ddclient/ ]
