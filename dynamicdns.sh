@@ -36,8 +36,7 @@ ssl=yes
 ttl=1
 pid=/var/run/ddclient/ddclient.pid  
 cache=/var/cache/ddclient/ddclient.cache  
-use=web
-web=checkip.dyndns.org
+use=web, web=checkip.dyndns.org
 
 protocol=keysystems,
 server=$serverURL,  
